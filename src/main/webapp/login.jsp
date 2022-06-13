@@ -23,12 +23,12 @@
 <div class="form-group">
 
 <label>Enter Email</label> <input type="email" required="required" class="form-control" id="exampleInputEmail"
-aria-describedby="emailHelp" name="em">
+aria-describedby="emailHelp" name="email">
 </div>
 
 <div class="form-group">
 <label for="exampleInputPassword1">Enter password</label> <input type="password" required="required" 
-class="form-control" id="exampleInputPassword1" name="ps">
+class="form-control" id="exampleInputPassword1" name="password">
 </div>
 
 <button type="submit"

@@ -10,7 +10,7 @@
 <body style="background-color:#DBE8D8">
 <%@include file="all_component/navbar.jsp" %>
 
-<div class="container p-4">
+<div class="container p-3">
 <div class="col-md-20 offset-md-0.5">
 <div class="card">
 <div class="card-body">

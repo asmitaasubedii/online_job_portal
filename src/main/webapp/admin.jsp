@@ -15,6 +15,6 @@
 <h1 class="text-white p-4">Welcome Admin</h1>
 </div>
 </div>
-
+<h1>Welcome Admin</h1>
 </body>
 </html>
