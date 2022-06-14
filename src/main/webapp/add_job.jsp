@@ -1,3 +1,6 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false" %>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -17,10 +20,17 @@
 
 <div class="text-center text-success">
 <i class="fa-solid fa-users fa-3x"></i>
+
+<c:if test="${not empty succMsg }">
+<div class="alert alert-success" role="alert">
+${ succMsg}</div>
+<c:remove var="succMsg"/>
+</c:if>
+
 <h4>Add jobs</h4>
 
 </div>
-<form action="addJobs"methods="post">
+<form action="add_job" methods="get">
 <div class="form-group">
 <label>Enter title</label> <input type="text" name="title"
 required class="form-control">

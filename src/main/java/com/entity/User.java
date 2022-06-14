@@ -1,7 +1,6 @@
 package com.entity;
 
 public class User {
-	
 	private int id;
 	private String firstname;
 	private String lastname;
