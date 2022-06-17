@@ -8,7 +8,7 @@
 <%@include file="all_component/all_css.jsp" %>
 
 </head>
-<body style="background-color:#DBE8D8">
+<body style="background-color:rgba(2, 2, 0, 0.1)">
 <%@include file="all_component/navbar.jsp" %>
 <div class="container-fluid">
 <div class="row p-5">

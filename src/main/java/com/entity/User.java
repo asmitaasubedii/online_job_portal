@@ -9,10 +9,7 @@ public class User {
 	private String phone_number;
 	private String qualification;
 	private String role;
-	public User() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	
 	public User(String firstname, String lastname, String email, String password, String phone_number,
 			String qualification, String role) {
 		super();
@@ -23,6 +20,10 @@ public class User {
 		this.phone_number = phone_number;
 		this.qualification = qualification;
 		this.role = role;
+	}
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	public int getId() {
 		return id;

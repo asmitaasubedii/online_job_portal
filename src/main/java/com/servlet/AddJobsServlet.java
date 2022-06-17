@@ -21,7 +21,7 @@ public class AddJobsServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
 		String title=req.getParameter("title");
-		String location=req.getParameter("location");
+		String location=req.getParameter("Location");
 		String category=req.getParameter("category");
 		String status=req.getParameter("status");
 		String description=req.getParameter("description");
@@ -34,7 +34,7 @@ public class AddJobsServlet extends HttpServlet{
 		j.setCategory(category);
 		
 		HttpSession session= req.getSession();
-		JobDAO dao= new JobDAO(DBConnect.getConnection());
+		JobDAO dao= new JobDAO(DBConnect.getConn());
 		boolean f= dao.addJob(j);
 		
 		if(f) {
