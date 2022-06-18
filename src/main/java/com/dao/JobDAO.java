@@ -68,7 +68,84 @@ public List<Job> getAllJob(){
     	System.out.println(e);
     	} 
 	return list;
-}}
+}
+
+public Job getJobById(int id){
+	
+	Job j =null;
+	try {
+		
+		String sql= "select * from job where id=?";
+		PreparedStatement ps=con.prepareStatement(sql);
+		ps.setInt(1, id);
+		ResultSet rs=ps.executeQuery();
+		while(rs.next()) {
+			
+			j=new Job();
+			j.setId(rs.getInt(1));
+			j.setTitle(rs.getString(2));
+			j.setDescription(rs.getString(3));
+			j.setCategory(rs.getString(4));
+			j.setStatus(rs.getString(5));
+			j.setLocation(rs.getString(6));
+			j.setPublishdate(rs.getTimestamp(7)+"");
+			
+					
+		}
+		
+	}catch(Exception e){
+    	System.out.println(e);
+    	} 
+	return j;
+}
+public boolean updateJob(Job j) {
+	boolean f= false;
+	
+	try {
+		  String sql= "update job set title=?,description=?,category=?,status=?,location=? where id=?";
+		  PreparedStatement ps=con.prepareStatement(sql);  
+		
+		  ps.setString(1, j.getTitle());
+		  ps.setString(2, j.getDescription());
+		  ps.setString(3, j.getCategory());
+		  ps.setString(4, j.getStatus());
+		  ps.setString(5, j.getLocation());
+		  ps.setInt(6, j.getId());
+		  
+		  int i=ps.executeUpdate();
+		  
+		  if(i==1) {
+			  f= true;
+		  }
+		  
+		  
+	}catch(Exception e){
+    	System.out.println(e);
+    	}  
+	return f;
+	
+}
+public boolean deleteJob(int id) {
+	boolean f= false;
+	
+	try {
+		
+		String sql="delete from job where id=?";
+		PreparedStatement ps= con.prepareStatement(sql);
+		ps.setInt(1, id);
+
+		int i= ps.executeUpdate();
+		if(i==1) {
+			f=true;
+		}
+		
+	}catch(Exception e) {
+		e.printStackTrace();
+	}
+	return f;
+}
+
+}
 
 
 

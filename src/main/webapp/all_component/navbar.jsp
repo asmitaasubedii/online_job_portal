@@ -25,8 +25,14 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
     
-     <a href="login.jsp" class="btn btn-dark mr-2"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
-     <a href="register.jsp" class="btn btn-dark"><i class="fa-regular fa-user"></i>Signup</a>
+    <c:if test="${not empty userobj.role }">
+     <a href="#" class="btn btn-dark mr-2"><i class="fa-solid fa-arrow-right-to-bracket"></i> admin</a>
+     <a href="#" class="btn btn-dark"><i class="fa-regular fa-user"></i>Logout</a>
+     </c:if>
+     <c:if test="${ empty userobj.role }">
+     <a href="login.jsp" class="btn btn-dark mr-2"><i class="fa-regular fa-user"></i> login</a>
+     <a href="register.jsp" class="btn btn-dark"><i class="fa-solid fa-arrow-right-to-bracket"></i>signup</a>
+     </c:if>
      
     </form>
   </div>

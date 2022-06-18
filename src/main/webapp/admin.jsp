@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +10,10 @@
 <%@include file="all_component/all_css.jsp" %>
 </head>
 <body>
+
+<c:if test="${userobj.role ne 'admin' }">
+<c:redirect url="login.jsp"></c:redirect>
+</c:if>
 
 <%@include file="all_component/navbar.jsp" %>
 <div class="container-fluid">
