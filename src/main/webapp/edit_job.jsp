@@ -25,8 +25,8 @@
 <div class="card">
 <div class="card-body">
 
-<div class="text-center text-success">
-<i class="fa-solid fa-users fa-3x"></i>
+<div class="text-center text-info">
+<i class="fa-solid fa-users fa-2x"></i>
 
 <%
 int id= Integer.parseInt(request.getParameter("id"));
@@ -81,9 +81,9 @@ class="custom-select">
 </div>
 <div class="form-group">
 <label>Enter Description</label>
-<textarea rows="7" cols="" name="description" class="form-control"><%=j.getDescription() %>></textarea>
+<textarea rows="7" cols="" name="description" class="form-control"><%=j.getDescription() %></textarea>
 </div>
-<button class="btn btn-success">Update Job</button>
+<button class="btn btn-dark">Update Job</button>
 </form>
 </div></div></div></div>
 

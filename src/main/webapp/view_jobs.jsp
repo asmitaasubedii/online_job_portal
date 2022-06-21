@@ -27,7 +27,7 @@
 <div class="container">
 <div class="row">
 <div class="col-md-12">
-<h2 class="text-center text-success">All Jobs</h2>
+<h2 class="text-center text-dark">All Jobs</h2>
 <c:if test="${not empty succMsg }">
 <div class="alert alert-success" role="alert">
 ${ succMsg}</div>
@@ -41,7 +41,7 @@ for(Job j:list){
 
 <div class="card mt-2">
 <div class="card-body">
-<div class="text-center text-primary text-success">
+<div class="text-center text-primary text-dark">
 <i class="fa-solid fa-clipboard-list fa-2x"></i>
 </div>
 

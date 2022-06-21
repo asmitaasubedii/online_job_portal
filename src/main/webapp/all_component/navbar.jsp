@@ -26,8 +26,8 @@
     <form class="form-inline my-2 my-lg-0">
     
     <c:if test="${not empty userobj.role }">
-     <a href="#" class="btn btn-dark mr-2"><i class="fa-solid fa-arrow-right-to-bracket"></i> admin</a>
-     <a href="#" class="btn btn-dark"><i class="fa-regular fa-user"></i>Logout</a>
+     <a href="#" class="btn btn-dark mr-2"><i class="fa-regular fa-user"></i> admin</a>
+     <a href="#" class="btn btn-dark"><i class="fa-solid fa-arrow-right-to-bracket"></i>Logout</a>
      </c:if>
      <c:if test="${ empty userobj.role }">
      <a href="login.jsp" class="btn btn-dark mr-2"><i class="fa-regular fa-user"></i> login</a>

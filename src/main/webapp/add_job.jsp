@@ -22,8 +22,8 @@
 <div class="card">
 <div class="card-body">
 
-<div class="text-center text-success">
-<i class="fa-solid fa-users fa-3x"></i>
+<div class="text-center text-info">
+<i class="fa-solid fa-users fa-2x"></i>
 
 <c:if test="${not empty succMsg }">
 <div class="alert alert-success" role="alert">
@@ -79,7 +79,7 @@ class="custom-select">
 <label>Enter Description</label>
 <textarea rows="7" cols="" name="description" class="form-control"></textarea>
 </div>
-<button class="btn btn-success">Post Job</button>
+<button class="btn btn-dark">Post Job</button>
 </form>
 </div></div></div></div>
 

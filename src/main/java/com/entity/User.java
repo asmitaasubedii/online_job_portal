@@ -6,19 +6,16 @@ public class User {
 	private String lastname;
 	private String email;
 	private String password;
-	private String phone_number;
-	private String qualification;
+	private int phone_number;
 	private String role;
 	
-	public User(String firstname, String lastname, String email, String password, String phone_number,
-			String qualification, String role) {
+	public User(String firstname, String lastname, String email, String password, int phone_number, String role) {
 		super();
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.email = email;
 		this.password = password;
 		this.phone_number = phone_number;
-		this.qualification = qualification;
 		this.role = role;
 	}
 	public User() {
@@ -55,17 +52,11 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getPhone_number() {
+	public int getPhone_number() {
 		return phone_number;
 	}
-	public void setPhone_number(String phone_number) {
+	public void setPhone_number(int phone_number) {
 		this.phone_number = phone_number;
-	}
-	public String getQualification() {
-		return qualification;
-	}
-	public void setQualification(String qualification) {
-		this.qualification = qualification;
 	}
 	public String getRole() {
 		return role;
@@ -73,8 +64,6 @@ public class User {
 	public void setRole(String role) {
 		this.role = role;
 	}
-	
-	
 	
 	
 }
