@@ -40,8 +40,11 @@ Job j= dao.getJobById(id);
 <form action="update" methods="get">
 <input type="hidden" value="<%=j.getId() %>" name="id">
 <div class="form-group">
-<label>Enter title</label> <input type="text" name="title"
+<label>Job title</label> <input type="text" name="title"
 required class="form-control" value="<%=j.getTitle() %>">
+
+<label>Email</label> <input type="text" name="email"
+required class="form-control" value="<%=j.getEmail() %>">
 </div>
 
 <div class="form-row">
@@ -78,6 +81,23 @@ class="custom-select">
 </select>
 </div>
 
+<div class="form-group col-md-4">
+<label>Time</label> <select name="time"
+class="custom-select">
+<option class="full_time" value="<%=j.getTime() %>"><%=j.getTime() %></option>
+<option value="full-time">Full Time</option>
+<option value="part-time">Part Time</option>
+
+</select>
+</div>
+<div class="form-group col-md-4">
+<label>Salary</label>
+ <input type="text" name="salary" class="form-control" value="<%=j.getSalary() %>">
+</div>
+<div class="form-group col-md-4">
+<label>Experience</label>
+ <input type="text" name="experience" class="form-control" value="<%=j.getExperience() %>">
+</div>
 </div>
 <div class="form-group">
 <label>Enter Description</label>

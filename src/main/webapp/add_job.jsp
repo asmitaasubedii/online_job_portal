@@ -36,8 +36,10 @@ ${ succMsg}</div>
 </div>
 <form action="add_job" methods="get">
 <div class="form-group">
-<label>Enter title</label> <input type="text" name="title"
-required class="form-control">
+<label>Enter Job title</label> 
+<input type="text" name="title" required class="form-control">
+<label>Enter Email</label>
+ <input type="email" name="email" required class="form-control">
 </div>
 
 <div class="form-row">
@@ -62,8 +64,6 @@ class="custom-select" id="inlineFormCustomSelectPref">
 <option value="Teacher">Teacher</option>
 </select>
 </div>
-
-
 <div class="form-group col-md-4">
 <label>Status</label> <select name="status"
 class="custom-select">
@@ -74,10 +74,29 @@ class="custom-select">
 </select>
 </div>
 
+<div class="form-group col-md-4">
+<label>Time</label> <select name="time"
+class="custom-select">
+
+<option value="full-time">Full Time</option>
+<option value="part-time">Part Time</option>
+
+</select>
+</div>
+<div class="form-group col-md-4">
+<label>Salary</label>
+ <input type="text" name="salary" class="form-control">
+</div>
+<div class="form-group col-md-4">
+<label>Experience</label>
+ <input type="text" name="experience" class="form-control">
+</div>
+
+
 </div>
 <div class="form-group">
 <label>Enter Description</label>
-<textarea rows="7" cols="" name="description" class="form-control"></textarea>
+<textarea rows="7"  name="description" class="form-control"></textarea>
 </div>
 <button class="btn btn-dark">Post Job</button>
 </form>

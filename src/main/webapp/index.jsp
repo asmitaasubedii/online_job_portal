@@ -27,64 +27,61 @@ opacity: 0.8;
 </style>
 
 </head>
-<body style="background-color:rgba(2, 2, 0, 0.1)">
+<body style="background-color:rgba(2, 2, 0, 0.1)" >
 
 <%@include file="all_component/navbar.jsp" %>
 <div class="container-fluid back-img">
 <div class="text-center p-4">
 <h1 class="text-black ">Find Your Job Here</h1>
+
 </div>
 </div>
+
+
+<div class="pt-4">
+<h2 class="text-center text-dark">Available Jobs</h2>
+
 <div class="container">
 <div class="row">
-<div class="col-md-5">
+
 <%
 JobDAO dao= new JobDAO(DBConnect.getConn());
 List<Job> list=dao.getAllJobforUser();
 for (Job j : list){
 %>
-<div class="card mt-3">
+
+<div class="col-md-4">
+<div class="card mt-3 border-0">
+
 <div class="card-body">
 <div class="text-left text-dark">
+<div class="pl-2">
+<h4><%=j.getTitle() %></h4>
 
-<h6><%=j.getTitle() %></h6>
-<%
-if(j.getDescription().length()> 0 && j.getDescription().length()<120){
-%>
-	<p><%=j.getDescription() %></p>
-	<%
-}else{
-	%>
-	<p><%=j.getDescription().substring(0,120) %></p>
-<% } %>
-
-<div class="form-row">
-
-<div class="form-group col-md-4">
-<input type="text" class="form-control form-control-sm" value="<%=j.getLocation() %>" readonly>
+<div class="form-col">
+<div class="form-group row-md-4">
+<p><i class="fa-solid fa-location-dot"></i> <%=j.getLocation() %></p>
 </div>
-
-<div class="form-group col-md-4">
-<input type="text" class="form-control form-control-sm" value="<%=j.getCategory() %>" readonly>
+<div class="form-group row-md-4">
+<p><i class="fa-solid fa-dollar-sign"></i> <%=j.getSalary() %></p>
 </div>
 
 </div>
+<h6><i class="fa-solid fa-clock"></i> <%=j.getPublishdate().toString() %></h6>
+</div>
 
-<h6>Pubish Date:<%=j.getPublishdate().toString() %></h6>
-
-<div class="text-left">
-
-<a href="one_view.jsp" class="btn btn-sm bg-dark text-white">View More</a>
+ <div class="form-group row-md-4 pt-4">
+  <span class="p-2 ml-2 bg-danger d-inline text-white border rounded-lg"><%=j.getTime() %></span>
+<a href="detailView.jsp?id=<%=j.getId() %>" class="btn text-danger btn-sm float-right" style=background-color:transparent>Learn More <i class="fa-solid fa-arrow-right"></i></a>
 </div></div></div>
-	</div>
-<%}
+</div>
+</div>
+<%
+}
 %>
 
 </div>
 </div>
-
-</div></div>
-
-
+</div>
 </body>
 </html>

@@ -21,17 +21,28 @@ public class AddJobsServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
 		String title=req.getParameter("title");
+		String email=req.getParameter("email");
 		String location=req.getParameter("Location");
 		String category=req.getParameter("category");
 		String status=req.getParameter("status");
 		String description=req.getParameter("description");
+		String time=req.getParameter("time");
+		String salary= req.getParameter("salary");
+		String experience=req.getParameter("experience");
+		
 		
 		Job j=new Job();
 		j.setTitle(title);
+		j.setEmail(email);
 		j.setDescription(description);
 		j.setLocation(location);
 		j.setStatus(status);
 		j.setCategory(category);
+		j.setTime(time);
+		j.setSalary(salary);
+		j.setExperience(experience);
+		
+		
 		
 		HttpSession session= req.getSession();
 		JobDAO dao= new JobDAO(DBConnect.getConn());

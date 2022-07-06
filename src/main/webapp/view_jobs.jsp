@@ -27,12 +27,14 @@
 <div class="container">
 <div class="row">
 <div class="col-md-12">
-<h2 class="text-center text-dark">All Jobs</h2>
+
+<!-- <h2 class="text-center text-dark">All Jobs</h2> -->
 <c:if test="${not empty succMsg }">
 <div class="alert alert-success" role="alert">
 ${ succMsg}</div>
 <c:remove var="succMsg"/>
 </c:if>
+
 <% 
 JobDAO dao=new JobDAO(DBConnect.getConn());
 List<Job> list=dao.getAllJob();
@@ -46,7 +48,8 @@ for(Job j:list){
 </div>
 
 <h3><%=j.getTitle() %></h3>
-<p><%=j.getDescription() %>></p>
+<p><%=j.getDescription() %></p>
+<p><%=j.getEmail() %></p>
 <br>
 <div class="form-row">
 
@@ -61,6 +64,16 @@ for(Job j:list){
 <div class="form-group col-md-4">
 <input type="text" class="form-control form-control-sm" value="<%=j.getStatus() %>" readonly>
 </div>
+<div class="form-group col-md-4">
+<input type="text" class="form-control form-control-sm" value="<%=j.getTime() %>" readonly>
+</div>
+<div class="form-group col-md-4">
+<input type="text" class="form-control form-control-sm" value="<%=j.getSalary() %>" readonly>
+</div>
+<div class="form-group col-md-4">
+<input type="text" class="form-control form-control-sm" value="<%=j.getExperience() %>" readonly>
+</div>
+
 
 </div>
 
@@ -74,13 +87,7 @@ for(Job j:list){
 <%}
 %>
 
-
-
-
-
-
-
-</div></div></div></div></div>
+</div></div></div>
 
 </body>
 </html>

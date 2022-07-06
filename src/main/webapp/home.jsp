@@ -50,9 +50,10 @@
 <option value="Teacher">Teacher</option>
 </select>
 </div>
-<div class="text-center">
+
 <button class="btn btn-sm bg-dark text-white mt-1">Submit</button>
 </form>
+
 </div></div></div></div>
 
 <%
@@ -95,9 +96,9 @@ if(j.getDescription().length()> 0 && j.getDescription().length()<120){
 
 <div class="text-center">
 
-<a href="one_view.jsp" class="btn btn-sm bg-dark text-white">View More</a>
-<a href="one_view.jsp" class="btn btn-sm bg-dark text-white">Apply For Job</a>
-</div></div>
+<a href="detailView.jsp" class="btn btn-sm bg-dark text-white">View More</a>
+<a href="#" class="btn btn-sm bg-dark text-white">Apply For Job</a>
+</div></div></div>
 	
 <%}
 %>
@@ -105,6 +106,5 @@ if(j.getDescription().length()> 0 && j.getDescription().length()<120){
 </div>
 </div>
 
-</div></div></div>
 </body>
 </html>

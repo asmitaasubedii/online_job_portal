@@ -46,7 +46,7 @@ class="btn btn-info badge-pill btn-block">Login</button>
 </div>
 </div>
 </div>
-</div>
+
 
 </body>
 </html>
