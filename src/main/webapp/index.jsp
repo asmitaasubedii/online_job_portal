@@ -5,7 +5,6 @@
 <%@page import="java.util.List"%>
 
 
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -39,7 +38,7 @@ opacity: 0.8;
 
 
 <div class="pt-4">
-<h2 class="text-center text-dark">Available Jobs</h2>
+<h2 class="text-center text-dark">Top Jobs</h2>
 
 <div class="container">
 <div class="row">
@@ -60,6 +59,9 @@ for (Job j : list){
 
 <div class="form-col">
 <div class="form-group row-md-4">
+<p>Post : <%=j.getCategory() %></p>
+</div>
+<div class="form-group row-md-4">
 <p><i class="fa-solid fa-location-dot"></i> <%=j.getLocation() %></p>
 </div>
 <div class="form-group row-md-4">
@@ -70,7 +72,7 @@ for (Job j : list){
 <h6><i class="fa-solid fa-clock"></i> <%=j.getPublishdate().toString() %></h6>
 </div>
 
- <div class="form-group row-md-4 pt-4">
+ <div class="form-group row-md-4 pt-3">
   <span class="p-2 ml-2 bg-danger d-inline text-white border rounded-lg"><%=j.getTime() %></span>
 <a href="detailView.jsp?id=<%=j.getId() %>" class="btn text-danger btn-sm float-right" style=background-color:transparent>Learn More <i class="fa-solid fa-arrow-right"></i></a>
 </div></div></div>

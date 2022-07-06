@@ -26,7 +26,7 @@
 <div class="card-body">
 
 <div class="text-center text-info">
-<i class="fa-solid fa-users fa-2x"></i>
+<i class="fa-solid fa-users fa-"></i>
 
 <%
 int id= Integer.parseInt(request.getParameter("id"));
@@ -34,16 +34,16 @@ JobDAO dao =new JobDAO(DBConnect.getConn());
 Job j= dao.getJobById(id);
 %>
 
-<h4>Edit jobs</h4>
+<h5>Edit jobs</h5>
 
 </div>
 <form action="update" methods="get">
 <input type="hidden" value="<%=j.getId() %>" name="id">
 <div class="form-group">
-<label>Job title</label> <input type="text" name="title"
+<label>Company Name</label> <input type="text" name="title"
 required class="form-control" value="<%=j.getTitle() %>">
 
-<label>Email</label> <input type="text" name="email"
+<label>Company Email</label> <input type="text" name="email"
 required class="form-control" value="<%=j.getEmail() %>">
 </div>
 

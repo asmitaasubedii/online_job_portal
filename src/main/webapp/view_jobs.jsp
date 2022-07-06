@@ -47,9 +47,10 @@ for(Job j:list){
 <i class="fa-solid fa-clipboard-list fa-2x"></i>
 </div>
 
-<h3><%=j.getTitle() %></h3>
+<h5>Company Name : <%=j.getTitle() %></h5>
+<h5>Email : <%=j.getEmail() %></h5>
 <p><%=j.getDescription() %></p>
-<p><%=j.getEmail() %></p>
+
 <br>
 <div class="form-row">
 

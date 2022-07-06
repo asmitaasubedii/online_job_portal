@@ -23,7 +23,7 @@
 <div class="card-body">
 
 <div class="text-center text-info">
-<i class="fa-solid fa-users fa-2x"></i>
+<i class="fa-solid fa-users fa"></i>
 
 <c:if test="${not empty succMsg }">
 <div class="alert alert-success" role="alert">
@@ -31,14 +31,14 @@ ${ succMsg}</div>
 <c:remove var="succMsg"/>
 </c:if>
 
-<h4>Add jobs</h4>
+<h5>Add jobs</h6>
 
 </div>
 <form action="add_job" methods="get">
 <div class="form-group">
-<label>Enter Job title</label> 
+<label>Enter Company Name</label> 
 <input type="text" name="title" required class="form-control">
-<label>Enter Email</label>
+<label>Enter Company Email</label>
  <input type="email" name="email" required class="form-control">
 </div>
 
